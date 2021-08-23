@@ -33,9 +33,10 @@ class MyCollectionViewCell: UICollectionViewCell {
     
     func configure(_ product: Product) {
         loadThumbnails(product: product)
-        prductNameLabel.text = product.title
-        originPriceLabel.text = String(product.price)
-        discountedPriceLabel.text = product.descriptions
+        updateTitle(product: product)
+//        originPriceLabel.text = String(product.price)
+        updateOriginPrice(product: product)
+        updateDiscountedPrice(product: product)
         stock.text = String(product.stock)
         //updateLabels(product: product)
     }
@@ -46,14 +47,21 @@ class MyCollectionViewCell: UICollectionViewCell {
         updataeStock(product: product)
     }
     
+    private func updateTitle(product: Product) {
+        prductNameLabel.text = product.title
+        prductNameLabel.font = UIFont.boldSystemFont(ofSize: 17)
+    }
+    
     private func updateOriginPrice(product: Product) {
+        originPriceLabel.text = "\(product.currency)\(product.price)"
         guard let text = originPriceLabel.text else { return }
         let attributedString = NSMutableAttributedString(string: text)
         let range = (text as NSString).range(of: text)
         if product.discountedPrice != nil {
             attributedString.addAttribute(NSAttributedString.Key.strikethroughStyle, value: 1, range: range)
+            originPriceLabel.attributedText = attributedString
             originPriceLabel.textColor = .red
-        }else {
+        } else {
             attributedString.addAttribute(NSAttributedString.Key.strikethroughStyle, value: 0, range: range)
             originPriceLabel.attributedText = attributedString
             originPriceLabel.textColor = .lightGray

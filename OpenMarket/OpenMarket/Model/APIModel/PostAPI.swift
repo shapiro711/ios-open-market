@@ -47,7 +47,7 @@ enum PostAPI: APIable {
                     "price": price.description,
                     "currency": currency,
                     "stock": stock.description,
-                    "discountedPrice": discountedPrice?.description,
+                    "discounted_price": discountedPrice?.description,
                     "password": password]
         }
     }

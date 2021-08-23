@@ -40,7 +40,7 @@ enum PatchAPI: APIable {
                     "price": price?.description,
                     "currency": currency?.description,
                     "stock": stock?.description,
-                    "discountedPrice": discountedPrice?.description,
+                    "discounted_price": discountedPrice?.description,
                     "password": password.description]
         }
     }
