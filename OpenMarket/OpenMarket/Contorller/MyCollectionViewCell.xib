@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,26 +23,26 @@
                             <constraint firstAttribute="width" secondItem="PO0-iA-Rgr" secondAttribute="height" multiplier="191:124" id="M0W-Cd-u1o"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ProductName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JkR-0B-59S">
-                        <rect key="frame" x="168.5" y="268" width="105.5" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ProductName" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JkR-0B-59S">
+                        <rect key="frame" x="20" y="268" width="402" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OriginPrice" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ANk-d8-iLB">
-                        <rect key="frame" x="179" y="309" width="84.5" height="21"/>
+                        <rect key="frame" x="179" y="308.5" width="84.5" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DiscountedPrice" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o7h-8v-xuy">
-                        <rect key="frame" x="158.5" y="345" width="125.5" height="21"/>
+                        <rect key="frame" x="158.5" y="344.5" width="125.5" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stock" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CJC-wp-H3p">
-                        <rect key="frame" x="199" y="396" width="44" height="21"/>
+                        <rect key="frame" x="199" y="385.5" width="44" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -51,7 +51,7 @@
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstItem="CJC-wp-H3p" firstAttribute="top" secondItem="o7h-8v-xuy" secondAttribute="bottom" constant="30" id="4iZ-ih-6IO"/>
+                <constraint firstItem="CJC-wp-H3p" firstAttribute="top" secondItem="o7h-8v-xuy" secondAttribute="bottom" constant="20" id="4iZ-ih-6IO"/>
                 <constraint firstItem="ANk-d8-iLB" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="4wy-RI-4lb"/>
                 <constraint firstItem="o7h-8v-xuy" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="GJT-FB-HEg"/>
                 <constraint firstItem="ANk-d8-iLB" firstAttribute="top" secondItem="JkR-0B-59S" secondAttribute="bottom" constant="20" id="Hev-UA-eoS"/>
@@ -61,8 +61,10 @@
                 <constraint firstItem="PO0-iA-Rgr" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="bVt-g5-DG4"/>
                 <constraint firstItem="o7h-8v-xuy" firstAttribute="top" secondItem="ANk-d8-iLB" secondAttribute="bottom" constant="15" id="icL-lX-g5k"/>
                 <constraint firstItem="JkR-0B-59S" firstAttribute="top" secondItem="PO0-iA-Rgr" secondAttribute="bottom" constant="10" id="luu-h2-kwX"/>
+                <constraint firstAttribute="trailing" secondItem="JkR-0B-59S" secondAttribute="trailing" constant="20" id="nTx-1Z-Dfi"/>
                 <constraint firstItem="CJC-wp-H3p" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="o5r-b2-yj4"/>
                 <constraint firstItem="PO0-iA-Rgr" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="30" id="rhM-aH-Ehq"/>
+                <constraint firstItem="JkR-0B-59S" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="rnb-3c-dSL"/>
             </constraints>
             <size key="customSize" width="442" height="492"/>
             <connections>
@@ -72,7 +74,7 @@
                 <outlet property="productImage" destination="PO0-iA-Rgr" id="GMv-5A-GDS"/>
                 <outlet property="stock" destination="CJC-wp-H3p" id="3hA-je-gBW"/>
             </connections>
-            <point key="canvasLocation" x="421.73913043478262" y="-19.419642857142858"/>
+            <point key="canvasLocation" x="248" y="-27"/>
         </collectionViewCell>
     </objects>
 </document>

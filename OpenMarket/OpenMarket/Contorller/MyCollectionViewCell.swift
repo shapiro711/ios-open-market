@@ -21,12 +21,23 @@ class MyCollectionViewCell: UICollectionViewCell {
         return UINib(nibName: identifier, bundle: nil)
     }
     
-    func configure() {
-        productImage.image = UIImage(named: "MackBookImage_1")
-        prductNameLabel.text = "product.title"
-        originPriceLabel.text = "String(product.price)"
-        discountedPriceLabel.text = "product.descriptions"
-        stock.text = "String(product.stock)"
+    private func loadThumbnails(product: Product) {
+        if let thumbnail = product.thumbnails.first,
+           let thumbnailURL = URL(string: thumbnail),
+           let data = try? Data(contentsOf: thumbnailURL) {
+            DispatchQueue.main.async { [self] in
+                productImage.image = UIImage(data: data)
+            }
+        }
+    }
+    
+    func configure(_ product: Product) {
+        loadThumbnails(product: product)
+        prductNameLabel.text = product.title
+        originPriceLabel.text = String(product.price)
+        discountedPriceLabel.text = product.descriptions
+        stock.text = String(product.stock)
+        //updateLabels(product: product)
     }
     
     private func updateLabels(product: Product) {
